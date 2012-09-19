@@ -12,7 +12,7 @@ use Heartsentwined\FileSystemManager\FileSystemManager;
  * @author heartsentwined <heartsentwined@cogito-lab.com>
  * @license GPL http://opensource.org/licenses/gpl-license.php
  */
-class Doctrine extends Zf
+abstract class Doctrine extends Zf
 {
     /**
      * ServiceManager alias of EntityManager

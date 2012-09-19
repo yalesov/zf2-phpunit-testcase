@@ -9,7 +9,7 @@ use Heartsentwined\ArgValidator\ArgValidator;
  * @author heartsentwined <heartsentwined@cogito-lab.com>
  * @license GPL http://opensource.org/licenses/gpl-license.php
  */
-class Zf extends \PHPUnit_Framework_TestCase
+abstract class Zf extends \PHPUnit_Framework_TestCase
 {
     /**
      * path to bootstrap file, which should return Zend\Mvc\Application
