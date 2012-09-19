@@ -66,7 +66,7 @@ class FooTest extends ZfTestcase
 {
     public function setUp()
     {
-        $this->setBootstrap('foo/bootstrap.php'); // watch out for relative dirs!
+        $this->setBootstrap('foo/bootstrap.php'); // watch out for relative dirs! - use __DIR__ if needed
         parent::setUp();
     }
 
@@ -82,7 +82,7 @@ class FooTest extends ZfTestcase
 
 Bootstrap your Zf2 application with the bootstrap file `foo/bootstrap.php`, and with [Doctrine ORM](http://www.doctrine-project.org/projects/orm.html) support. Your `EntityManager` is aliased with the ServiceManager at `doctrine.entitymanager.orm_default`.
 
-(Optional) You have declared the directory `foo/tmp` as a temporary directory somewhere in your config files - possibly for storing Proxies, and you want this dir to be created before each test; and deleted after each test.
+(Optional) You have declared the directory `foo/tmp` as a temporary directory somewhere in your config files - possibly for storing Proxies, and you want this directory to be created before each test; and deleted after each test. (i.e. during setUp() and teardown())
 
 ```php
 use Heartsentwined\Phpunit\Testcase\Doctrine as DoctrineTestcase;
