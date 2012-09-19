@@ -1,6 +1,6 @@
 # zf2-phpunit-testcase
 
-PHPUnit test case base classes for ZF2 applications.
+[PHPUnit](http://phpunit.de/) test case base classes for ZF2 applications.
 
 # Installation
 
