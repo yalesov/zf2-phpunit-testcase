@@ -22,7 +22,7 @@ abstract class Doctrine extends Zf
     protected $emAlias;
     protected function setEmAlias($emAlias)
     {
-        ArgValidator::assert($emAlias, array('string', 'min' => 1));
+        ArgValidator::assert($emAlias, 'string');
         $this->emAlias = $emAlias;
         return $this;
     }
@@ -57,7 +57,7 @@ abstract class Doctrine extends Zf
         parent::setup();
 
         $this->em = $this->sm->get($this->emAlias);
-        if (!is_dir($this->tmpDir)) mkdir($this->tmpDir);
+        if ($this->tmpDir && !is_dir($this->tmpDir)) mkdir($this->tmpDir);
 
         $metadatas = $this->em->getMetadataFactory()->getAllMetadata();
         if (!empty($metadatas)) {
@@ -77,7 +77,9 @@ abstract class Doctrine extends Zf
      */
     public function tearDown()
     {
-        FileSystemManager::rrmdir($this->tmpDir);
+        if ($this->tmpDir) {
+            FileSystemManager::rrmdir($this->tmpDir);
+        }
     }
 
     public function testEmInstance()
