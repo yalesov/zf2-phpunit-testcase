@@ -28,6 +28,13 @@ class Doctrine extends Zf
     }
 
     /**
+     * the ORM EntityManager
+     *
+     * @var EntityManager
+     */
+    protected $em;
+
+    /**
      * path to tmp dir, possibly for storing proxies
      *
      * @var string
