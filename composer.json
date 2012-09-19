@@ -1,0 +1,25 @@
+{
+    "name": "heartsentwined/zf2-phpunit-testcase",
+    "description": "PHPUnit test case base classes for ZF2 applications.",
+    "license": "GPL-3.0",
+    "keywords": ["phpunit", "zf2", "zendframework"],
+    "homepage": "https://github.com/heartsentwined/zf2-phpunit-testcase",
+    "authors": [
+        {
+            "name": "heartsentwined",
+            "email": "heartsentwined@cogito-lab.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Heartsentwined\\Phpunit\\Testcase": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+        "heartsentwined/zf2-doctrine": "1.*",
+        "heartsentwined/file-system-manager": "1.*"
+    }
+}
