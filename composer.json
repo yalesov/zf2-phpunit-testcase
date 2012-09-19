@@ -19,6 +19,7 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
+        "heartsentwined/arg-validator": "1.*",
         "heartsentwined/zf2-doctrine": "1.*",
         "heartsentwined/file-system-manager": "1.*"
     }
