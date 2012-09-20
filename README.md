@@ -70,6 +70,12 @@ class FooTest extends ZfTestcase
         parent::setUp();
     }
 
+    public function tearDown()
+    {
+        // your tearDown() operations
+        parent::tearDown();
+    }
+
     public function testFoo()
     {
         // $this->application instance of Zend\Mvc\Application
@@ -97,6 +103,12 @@ class FooTest extends DoctrineTestcase
             ->setEmAlias('doctrine.entitymanager.orm_default')
             ->setTmpDir('foo/tmp'); // optional: see use case above
         parent::setUp();
+    }
+
+    public function tearDown()
+    {
+        // your tearDown() operations
+        parent::tearDown();
     }
 
     public function testFoo()
