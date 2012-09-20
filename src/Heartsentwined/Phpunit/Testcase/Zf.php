@@ -52,6 +52,17 @@ abstract class Zf extends \PHPUnit_Framework_TestCase
         $this->sm = $application->getServiceManager();
     }
 
+    /**
+     * start afresh
+     *
+     * @return void
+     */
+    public function tearDown()
+    {
+        unset($this->application);
+        unset($this->sm);
+    }
+
     public function testServiceManagerInstance()
     {
         $this->assertInstanceOf(

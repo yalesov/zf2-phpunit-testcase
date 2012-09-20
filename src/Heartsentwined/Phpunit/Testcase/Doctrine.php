@@ -71,12 +71,14 @@ abstract class Doctrine extends Zf
     }
 
     /**
-     * remove tmp dir
+     * start afresh; remove tmp dir
      *
      * @return void
      */
     public function tearDown()
     {
+        parent::tearDown();
+        unset($this->em);
         if ($this->tmpDir) {
             FileSystemManager::rrmdir($this->tmpDir);
         }
