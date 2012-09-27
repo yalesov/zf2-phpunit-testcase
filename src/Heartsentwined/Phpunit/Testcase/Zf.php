@@ -21,6 +21,7 @@ abstract class Zf extends \PHPUnit_Framework_TestCase
     {
         ArgValidator::assert($bootstrap, array('string', 'min' => 1));
         $this->bootstrap = $bootstrap;
+
         return $this;
     }
 

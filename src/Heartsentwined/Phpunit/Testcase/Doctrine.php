@@ -24,6 +24,7 @@ abstract class Doctrine extends Zf
     {
         ArgValidator::assert($emAlias, 'string');
         $this->emAlias = $emAlias;
+
         return $this;
     }
 
@@ -44,6 +45,7 @@ abstract class Doctrine extends Zf
     {
         ArgValidator::assert($tmpDir, array('string', 'min' => 1));
         $this->tmpDir = $tmpDir;
+
         return $this;
     }
 
