@@ -9,7 +9,7 @@
 ```json
 {
     "require": {
-        "yalesov/zf2-phpunit-testcase": "1.*"
+        "yalesov/zf2-phpunit-testcase": "2.*"
     }
 }
 ```
