@@ -1,12 +1,12 @@
 <?php
-namespace Heartsentwined\Phpunit\Testcase;
+namespace Yalesov\Phpunit\Testcase;
 
-use Heartsentwined\ArgValidator\ArgValidator;
+use Yalesov\ArgValidator\ArgValidator;
 
 /**
  * basic ZF application boostrap: setup application + service manager
  *
- * @author heartsentwined <heartsentwined@cogito-lab.com>
+ * @author yalesov <yalesov@cogito-lab.com>
  * @license GPL http://opensource.org/licenses/gpl-license.php
  */
 abstract class Zf extends \PHPUnit_Framework_TestCase

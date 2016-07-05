@@ -9,7 +9,7 @@
 ```json
 {
     "require": {
-        "heartsentwined/zf2-phpunit-testcase": "1.*"
+        "yalesov/zf2-phpunit-testcase": "1.*"
     }
 }
 ```
@@ -60,7 +60,7 @@ Now, on to the test case base classes:
 Bootstrap your Zf2 application with the bootstrap file `foo/bootstrap.php`:
 
 ```php
-use Heartsentwined\Phpunit\Testcase\Zf as ZfTestcase;
+use Yalesov\Phpunit\Testcase\Zf as ZfTestcase;
 
 class FooTest extends ZfTestcase
 {
@@ -91,7 +91,7 @@ Bootstrap your Zf2 application with the bootstrap file `foo/bootstrap.php`, and 
 (Optional) You have declared the directory `foo/tmp` as a temporary directory somewhere in your config files - possibly for storing Proxies, and you want this directory to be created before each test; and deleted after each test. (i.e. during setUp() and teardown())
 
 ```php
-use Heartsentwined\Phpunit\Testcase\Doctrine as DoctrineTestcase;
+use Yalesov\Phpunit\Testcase\Doctrine as DoctrineTestcase;
 
 class FooTest extends DoctrineTestcase
 {

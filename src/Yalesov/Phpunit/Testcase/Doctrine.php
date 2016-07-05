@@ -1,15 +1,15 @@
 <?php
-namespace Heartsentwined\Phpunit\Testcase;
+namespace Yalesov\Phpunit\Testcase;
 
 use Doctrine\DBAL\Schema\SchemaException;
 use Doctrine\ORM\Tools\SchemaTool;
-use Heartsentwined\ArgValidator\ArgValidator;
-use Heartsentwined\FileSystemManager\FileSystemManager;
+use Yalesov\ArgValidator\ArgValidator;
+use Yalesov\FileSystemManager\FileSystemManager;
 
 /**
  * Doctrine ORM setup: set EntityManager and proxy tmp dir
  *
- * @author heartsentwined <heartsentwined@cogito-lab.com>
+ * @author yalesov <yalesov@cogito-lab.com>
  * @license GPL http://opensource.org/licenses/gpl-license.php
  */
 abstract class Doctrine extends Zf

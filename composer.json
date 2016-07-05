@@ -1,26 +1,34 @@
 {
-    "name": "heartsentwined/zf2-phpunit-testcase",
+    "name": "yalesov/zf2-phpunit-testcase",
     "description": "PHPUnit test case base classes for ZF2 applications.",
-    "license": "GPL-3.0",
     "keywords": ["phpunit", "zf2", "zendframework"],
-    "homepage": "https://github.com/heartsentwined/zf2-phpunit-testcase",
     "authors": [
         {
-            "name": "heartsentwined",
-            "email": "heartsentwined@cogito-lab.com",
-            "role": "Developer"
+            "name": "Yulij Andreevich Lesov",
+            "email": "yalesov@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-0": {
-            "Heartsentwined\\Phpunit\\Testcase": "src/"
-        }
-    },
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*",
-        "heartsentwined/arg-validator": "1.*",
-        "heartsentwined/zf2-doctrine": "1.*",
-        "heartsentwined/file-system-manager": "1.*"
+        "yalesov/arg-validator": "1.*",
+        "yalesov/zf2-doctrine": "1.*",
+        "yalesov/file-system-manager": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Yalesov\\Phpunit\\Testcase": "src/"
+        }
+    },
+    "license": "ISC",
+    "homepage": "https://github.com/yalesov/zf2-phpunit-testcase",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yalesov/zf2-phpunit-testcase"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/yalesov/zf2-phpunit-testcase/issues"
     }
 }
