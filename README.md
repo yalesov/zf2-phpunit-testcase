@@ -8,9 +8,9 @@
 
 ```json
 {
-    "require": {
-        "yalesov/zf2-phpunit-testcase": "2.*"
-    }
+  "require": {
+    "yalesov/zf2-phpunit-testcase": "2.*"
+  }
 }
 ```
 
@@ -36,19 +36,19 @@ require 'vendor/autoload.php';
  * e.g. load only certain module; use a test database connection, etc
  */
 $config = array(
-    'modules'   => array(
-        'Foo',
-        'Bar',
+  'modules'   => array(
+    'Foo',
+    'Bar',
+  ),
+  'module_listener_options' => array(
+    'config_glob_paths' => array(
+      __DIR__ . '/test/config/{,*.}php'
     ),
-    'module_listener_options' => array(
-        'config_glob_paths' => array(
-            __DIR__ . '/test/config/{,*.}php'
-        ),
-        'module_paths' => array(
-            'Foo' => __DIR__,
-            'vendor',
-        ),
+    'module_paths' => array(
+      'Foo' => __DIR__,
+      'vendor',
     ),
+  ),
 ));
 return Application::init($config);
 ```
@@ -64,23 +64,23 @@ use Yalesov\Phpunit\Testcase\Zf as ZfTestcase;
 
 class FooTest extends ZfTestcase
 {
-    public function setUp()
-    {
-        $this->setBootstrap('foo/bootstrap.php'); // watch out for relative dirs! - use __DIR__ if needed
-        parent::setUp();
-    }
+  public function setUp()
+  {
+    $this->setBootstrap('foo/bootstrap.php'); // watch out for relative dirs! - use __DIR__ if needed
+    parent::setUp();
+  }
 
-    public function tearDown()
-    {
-        // your tearDown() operations
-        parent::tearDown();
-    }
+  public function tearDown()
+  {
+    // your tearDown() operations
+    parent::tearDown();
+  }
 
-    public function testFoo()
-    {
-        // $this->application instance of Zend\Mvc\Application
-        // $this->sm instance of Zend\ServiceManager\ServiceManager
-    }
+  public function testFoo()
+  {
+    // $this->application instance of Zend\Mvc\Application
+    // $this->sm instance of Zend\ServiceManager\ServiceManager
+  }
 }
 ```
 
@@ -95,28 +95,28 @@ use Yalesov\Phpunit\Testcase\Doctrine as DoctrineTestcase;
 
 class FooTest extends DoctrineTestcase
 {
-    public function setUp()
-    {
-        // fluent interface available
-        $this
-            ->setBootstrap('foo/bootstrap.php')
-            ->setEmAlias('doctrine.entitymanager.orm_default')
-            ->setTmpDir('foo/tmp'); // optional: see use case above
-        parent::setUp();
-    }
+  public function setUp()
+  {
+    // fluent interface available
+    $this
+      ->setBootstrap('foo/bootstrap.php')
+      ->setEmAlias('doctrine.entitymanager.orm_default')
+      ->setTmpDir('foo/tmp'); // optional: see use case above
+    parent::setUp();
+  }
 
-    public function tearDown()
-    {
-        // your tearDown() operations
-        parent::tearDown();
-    }
+  public function tearDown()
+  {
+    // your tearDown() operations
+    parent::tearDown();
+  }
 
-    public function testFoo()
-    {
-        // $this->application instance of Zend\Mvc\Application
-        // $this->sm instance of Zend\ServiceManager\ServiceManager
-        // $this->em instance of Doctrine\ORM\EntityManager
-        // $this->tmpDir = 'foo/tmp'
-    }
+  public function testFoo()
+  {
+    // $this->application instance of Zend\Mvc\Application
+    // $this->sm instance of Zend\ServiceManager\ServiceManager
+    // $this->em instance of Doctrine\ORM\EntityManager
+    // $this->tmpDir = 'foo/tmp'
+  }
 }
 ```
