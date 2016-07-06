@@ -11,63 +11,63 @@ use Yalesov\ArgValidator\ArgValidator;
  */
 abstract class Zf extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * path to bootstrap file, which should return Zend\Mvc\Application
-     *
-     * @var string
-     */
-    protected $bootstrap;
-    protected function setBootstrap($bootstrap)
-    {
-        ArgValidator::assert($bootstrap, array('string', 'min' => 1));
-        $this->bootstrap = $bootstrap;
+  /**
+   * path to bootstrap file, which should return Zend\Mvc\Application
+   *
+   * @var string
+   */
+  protected $bootstrap;
+  protected function setBootstrap($bootstrap)
+  {
+    ArgValidator::assert($bootstrap, array('string', 'min' => 1));
+    $this->bootstrap = $bootstrap;
 
-        return $this;
-    }
+    return $this;
+  }
 
-    /**
-     * ZF application instance
-     *
-     * @var Zend\Mvc\Application
-     */
-    protected $application;
+  /**
+   * ZF application instance
+   *
+   * @var Zend\Mvc\Application
+   */
+  protected $application;
 
-    /**
-     * ZF service manager instance
-     *
-     * @var Zend\ServiceManager\ServiceManager
-     */
-    protected $sm;
+  /**
+   * ZF service manager instance
+   *
+   * @var Zend\ServiceManager\ServiceManager
+   */
+  protected $sm;
 
-    /**
-     * setup ZF application and service manager
-     * - $this->application Zend\Mvc\Application
-     * - $this->sm          Zend\ServiceManager\ServiceManager
-     *
-     * @return void
-     */
-    public function setUp()
-    {
-        $application = require $this->bootstrap;
-        $this->application = $application;
-        $this->sm = $application->getServiceManager();
-    }
+  /**
+   * setup ZF application and service manager
+   * - $this->application Zend\Mvc\Application
+   * - $this->sm      Zend\ServiceManager\ServiceManager
+   *
+   * @return void
+   */
+  public function setUp()
+  {
+    $application = require $this->bootstrap;
+    $this->application = $application;
+    $this->sm = $application->getServiceManager();
+  }
 
-    /**
-     * start afresh
-     *
-     * @return void
-     */
-    public function tearDown()
-    {
-        unset($this->application);
-        unset($this->sm);
-    }
+  /**
+   * start afresh
+   *
+   * @return void
+   */
+  public function tearDown()
+  {
+    unset($this->application);
+    unset($this->sm);
+  }
 
-    public function testServiceManagerInstance()
-    {
-        $this->assertInstanceOf(
-            'Zend\ServiceManager\ServiceManager',
-            $this->sm);
-    }
+  public function testServiceManagerInstance()
+  {
+    $this->assertInstanceOf(
+      'Zend\ServiceManager\ServiceManager',
+      $this->sm);
+  }
 }

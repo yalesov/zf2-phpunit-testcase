@@ -1,34 +1,34 @@
 {
-    "name": "yalesov/zf2-phpunit-testcase",
-    "description": "PHPUnit test case base classes for ZF2 applications.",
-    "keywords": ["phpunit", "zf2", "zendframework"],
-    "authors": [
-        {
-            "name": "Yulij Andreevich Lesov",
-            "email": "yalesov@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*",
-        "yalesov/arg-validator": "2.*",
-        "yalesov/zf2-doctrine": "2.*",
-        "yalesov/file-system-manager": "2.*"
-    },
-    "autoload": {
-        "psr-0": {
-            "Yalesov\\Phpunit\\Testcase": "src/"
-        }
-    },
-    "license": "ISC",
-    "homepage": "https://github.com/yalesov/zf2-phpunit-testcase",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/yalesov/zf2-phpunit-testcase"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/yalesov/zf2-phpunit-testcase/issues"
+  "name": "yalesov/zf2-phpunit-testcase",
+  "description": "PHPUnit test case base classes for ZF2 applications.",
+  "keywords": ["phpunit", "zf2", "zendframework"],
+  "authors": [
+    {
+      "name": "Yulij Andreevich Lesov",
+      "email": "yalesov@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "zendframework/zendframework": "2.*",
+    "yalesov/arg-validator": "2.*",
+    "yalesov/zf2-doctrine": "2.*",
+    "yalesov/file-system-manager": "2.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Yalesov\\Phpunit\\Testcase": "src/"
+    }
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/yalesov/zf2-phpunit-testcase",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/yalesov/zf2-phpunit-testcase"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/yalesov/zf2-phpunit-testcase/issues"
+  }
 }
